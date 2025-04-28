@@ -3,7 +3,7 @@ import React from 'react';
 
 function Col({ children, className, cols }) {
   const colClass = cols && colMap[cols];
-  const combinedClassName = `${colClass || ''} ${className || ''}`;
+  const combinedClassName = `TWCOLUMN border border-blue-100 p-1 ${colClass || ''} ${className || ''}`;
 
   return (
     <div className={combinedClassName}>

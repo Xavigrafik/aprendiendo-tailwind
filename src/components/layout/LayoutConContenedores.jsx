@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function LayoutConContenedores() {
   return (
@@ -6,7 +6,8 @@ function LayoutConContenedores() {
       <div className="max-w-6xl mx-auto border border-red-800">
         {/* Aquí va tu contenido principal */}
         <p className="p-4">
-          Este es el contenido dentro del contenedor con ancho máximo de 6xl centrado.
+          Este es el contenido dentro del contenedor con ancho máximo de 6xl
+          centrado.
         </p>
       </div>
     </div>

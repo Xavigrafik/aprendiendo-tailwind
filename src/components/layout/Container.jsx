@@ -1,8 +1,8 @@
 import React from "react";
 
 function Container({ children, className, maxWidth, width }) {
-  const defaultClassName = "mx-auto px-4 sm:px-6 lg:px-8";
-  let combinedClassName = `TW_CONTAINER ${defaultClassName} ${className || ""}`;
+  const defaultClassName = "mx-auto";
+  let combinedClassName = `TWCONTAINER ${defaultClassName} ${className || ""}`;
 
   if (width && width in widthMap) {
     combinedClassName += ` ${widthMap[width]}`;
