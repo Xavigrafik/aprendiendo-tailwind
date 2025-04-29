@@ -10,17 +10,17 @@ import BreakpointDetector from "./components/layout/BreakpointDetector";
 
 function App() {
 
-    const blue = 'p-3 bg-blue-100 border border-blue-500'
+    const blue = 'p-3 bg-blue-100 border border-blue-500 rounded-lg ';
 
   return (
     <>
-      <Container maxWidth="full" className="border border-red-500">
-            <Container maxWidth="5xl" className="border border-red-800 p-1">
+      <Container maxWidth="full" className="border border-red-500 p-3">
+            <Container maxWidth="5xl" className="border border-orange-400 p-1">
                   <Row className="flex items-center justify-center" alignItems="center" justifyContent="center" direction="row">
                       
                     
                     <Col className="w-11/12">
-                        <div className="{class}">11/12</div>
+                        <div className={blue}>11/12</div>
                         <div className={blue}>No funciona 12/12</div>
                     </Col>
                     <Col className="w-full">
@@ -59,20 +59,22 @@ function App() {
         </Container>
           <BreakpointDetector></BreakpointDetector>
 
-        <Container>
-            <Row>
-                <Col className="w-full">
-                    <h3 className="mt-6">GRID</h3>
-                    <div class="grid grid-cols-3 gap-4">
-                        <div className={blue}>Columna 1</div>
-                        <div className={blue}>Columna 2</div>
-                        <div className={blue}>Columna 3</div>
-                        <div className={blue}>Columna 4</div>
-                        <div className={blue}>Columna 5</div>
-                        <div className={blue}>Columna 6</div>
-                    </div>
-                </Col>
-              </Row>
+          <Container maxWidth="full" className="border border-red-500 p-3">
+                <Container maxWidth="5xl" className="border border-orange-400 p-1">
+                <Row>
+                    <Col className="w-full">
+                        <h3 className="mt-6">GRID</h3>
+                        <div className="grid grid-cols-3 gap-4">
+                            <div className={blue}>Columna 1</div>
+                            <div className={blue}>Columna 2</div>
+                            <div className={blue}>Columna 3</div>
+                            <div className={blue}>Columna 4</div>
+                            <div className={blue}>Columna 5</div>
+                            <div className={blue}>Columna 6</div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
         </Container>
     </>
   );
