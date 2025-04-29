@@ -9,42 +9,35 @@ import Col from "./components/layout/Col";
 import BreakpointDetector from "./components/layout/BreakpointDetector";
 
 function App() {
+
+    const blue = 'p-3 bg-blue-100 border border-blue-500'
+
   return (
     <>
       <Container maxWidth="full" className="border border-red-500">
             <Container maxWidth="5xl" className="border border-red-800 p-1">
                   <Row className="flex items-center justify-center" alignItems="center" justifyContent="center" direction="row">
                       
-                    <Col cols={6}>
-                          Children
+                    
+                    <Col className="w-11/12">
+                        <div className="{class}">11/12</div>
+                        <div className={blue}>No funciona 12/12</div>
                     </Col>
-                    <Col cols={6}>
-                        <div className="p-1 bg-blue-100">2</div>
+                    <Col className="w-full">
+                        <div className={blue}>full</div>
                     </Col>
-                    <Col cols={6}>
-                        <div className="p-1 bg-blue-100">3</div>
+                    <Col className="w-6/12">
+                        <div className={blue}>50%</div>
                     </Col>
-                    <Col cols={6}>
-                        <div className="p-1 bg-blue-100">4</div>
+                    <Col className="w-6/12">
+                        <div className={blue}>50%</div>
                     </Col>
-                    <Col cols={12}>
-                        <div className="p-1 bg-blue-100">Full</div>
+                   
+                    <Col className="w-auto">
+                        <div className={blue}>W-AUTO</div>
                     </Col>
-                      
-                      <Col cols={3}>
-                        <div className="p-1 bg-blue-100">4</div>
-                    </Col>
-                      <Col cols={3}>
-                        <div className="p-1 bg-blue-100">4</div>
-                    </Col>
-                      <Col cols={3}>
-                        <div className="p-1 bg-blue-100">4</div>
-                    </Col>
-                      <Col cols={3}>
-                        <div className="p-3 bg-blue-100">4</div>
-                    </Col>
-                    <Col cols={'auto'}>
-                        <div className="p-3 ">Autooo000 width a lo que de</div>
+                    <Col className="w-auto">
+                        <div className={blue}>W-AUTO</div>
                       </Col>
                     {/* <Col>Col no props</Col> */}
                     {/* <Col>
@@ -52,22 +45,35 @@ function App() {
                         <ProfileCard nombre="Francisco" />
                       </Col> */}
                   </Row>
-                  <Row>
-                      <h3>EEOO__56</h3>
-                  </Row>
+                 
                   
-                <Row>
-                    <Col cols={{  xs:'12', sm: '6', md: '12', lg: '12', xl : '1', '2xl' : '12' }} className="p-4">
-                        { "xs:12, sm: '6', md: '12', lg: '12', 'xl' : '1', '2xl' : '12' " }
+                  <Row>
+                      <Col className="w-11/12 sm:w-3/12 md:w-11/12 lg:w-11/12 xl:w-6/12 2xl:w-3/12">
+                      <div className={blue}>6{"w-11/12 sm:w-3/12 md:w-11/12 lg:w-11/12 xl:w-6/12 l:w-11/12"}</div>
                     </Col>
-                    <Col cols={{ xs:'12', sm: '6', md: '4', lg: '12' }} className="p-4">
-                        { "xs:12, sm: '6', md: '4', lg: '12'" }
-                        {/* Generará las clases literales "sm:w-6/12 md:w-4/12 lg:w-3/12" */}
+                    <Col className="w-11/12 sm:w-3/12 md:w-11/12 lg:w-11/12 xl:w-6/12 2xl:w-3/12">
+                      <div className={blue}>6{"w-11/12 sm:w-3/12 md:w-11/12 lg:w-11/12 xl:w-6/12 l:w-11/12"}</div>
                     </Col>
                 </Row>
             </Container>
         </Container>
-        <BreakpointDetector></BreakpointDetector>
+          <BreakpointDetector></BreakpointDetector>
+
+        <Container>
+            <Row>
+                <Col className="w-full">
+                    <h3 className="mt-6">GRID</h3>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div className={blue}>Columna 1</div>
+                        <div className={blue}>Columna 2</div>
+                        <div className={blue}>Columna 3</div>
+                        <div className={blue}>Columna 4</div>
+                        <div className={blue}>Columna 5</div>
+                        <div className={blue}>Columna 6</div>
+                    </div>
+                </Col>
+              </Row>
+        </Container>
     </>
   );
 }

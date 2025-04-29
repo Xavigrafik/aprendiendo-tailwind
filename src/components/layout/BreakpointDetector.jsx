@@ -43,7 +43,7 @@ function BreakpointDetector() {
 
   return (
     <div className="fixed bottom-0 right-0 bg-black text-white p-2 z-50 hover:opacity-0">
-      Breakpoint actual: <span className="font-bold">{breakpoint}</span>
+      Breakpoint: <span className="font-bold">{breakpoint}</span>
     </div>
   );
 }
